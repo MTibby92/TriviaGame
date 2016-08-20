@@ -1,0 +1,6 @@
+1) Starts with a splash to start the game
+--on click the game function will start
+--it will empty out/hide the resposne div
+--it will populate & initialize the timer countdown, the question, and the appropriate choices
+
+2) 
