@@ -2,21 +2,30 @@
 <html>
 <head>
 	<title>Trivia Game</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+	<script type="text/javascript" src="./assets/javascript/app.js"></script>
 </head>
 <body>
 
 <div class="container">
 	<div id="header">
-		<h1></h1>
+		<h1>Generic Header for Each Page</h1>
 	</div>
 
-	<div id="page-response"></div>
+	<div id="time-remaining">Time remaining: <span id="time"></span> seconds.</div>
 
-	<div id="time-remaining"></div>
+	<div id="page-response">
+		<button id="start"></button>
+	</div>
 
 	<div id="question"></div>
 
-	<div id="choices"></div>
+	<div id="choices">
+		<button class="selection" id="choice1"></button>
+		<button class="selection" id="choice2"></button>
+		<button class="selection" id="choice3"></button>
+		<button class="selection" id="choice4"></button>
+	</div>
 </div>
 
 </body>

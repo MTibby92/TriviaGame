@@ -1,6 +1,9 @@
-1) Starts with a splash to start the game
---on click the game function will start
---it will empty out/hide the resposne div
---it will populate & initialize the timer countdown, the question, and the appropriate choices
+we need a start button and a restart button listening for a click event; these buttons should trigger the start game function
 
-2) 
+the game could be an object; research object constructors; it might be beneficial to create a new object each time the function is run so you don't have to worry about any funky behavior
+
+answer choices should each be buttons so you can click anywhere; style it to not look like a button
+
+game object needs a timer method
+
+game object can have a question attribute/object with key:value pairs? can a key have multiple values
