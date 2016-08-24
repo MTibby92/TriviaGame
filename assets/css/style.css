@@ -1,0 +1,50 @@
+.container {
+	width: 70%;
+	margin: auto;
+	margin-top: 5%;	
+}
+
+#header {
+	font-size: 300%;
+	text-align: center;
+	margin-top: 10%;
+	margin-bottom: 2%;
+}
+
+#time-remaining {
+	margin: auto;
+	text-align: center;
+	margin-bottom: 1.45%;
+}
+
+#srtBtnDiv {
+	text-align: center;
+}
+
+#page-response {
+	margin: auto;
+	text-align: center;
+}
+
+#page-response p {
+	margin-bottom: 1.45%;
+}
+
+#page-response div {
+	margin-bottom: 1.45%;
+}
+
+#question {
+	margin: auto;
+	text-align: center;
+	margin-bottom: 1.45%;
+}
+
+#choices {
+	margin: auto;
+	text-align: center;
+}
+
+.selection {
+	margin-right: 5%;
+}

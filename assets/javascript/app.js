@@ -1,8 +1,7 @@
 var counter; //initializes the timer
 
 var game = {
-	time: 30, //length given for each question (reality its 30)
-	//pause: 3, //length for correct or incorrect prompts
+	time: 30, //length given for each question
 	questionNumber: 1, //tracks which question the user is on
 	correct: 0,
 	incorrect: 0,
@@ -70,7 +69,7 @@ var game = {
 	noAnswer: function() {
 		game.unanswered++
 		clearInterval(counter)
-		$('#page-response').append('<p>Nope!</p>')
+		$('#page-response').append('<p>Out of Time!</p>')
 		//note that the noAnswer function has to subtract two because in the timer function we increase the question number before we call this function; this is not the case with the correct answer and the wrong answer
 		$('#page-response').append('<p>The correct answer was: ' + game.answers[game.questionNumber-2] + '</p>')
 		$('#question').hide()
@@ -95,7 +94,8 @@ var game = {
 		}
 	},
 	results: function() {
-		$('#page-response').html("All done, here's how you did!")
+		$('#page-response').empty()
+		$('#page-response').append("<div>All done, here's how you did!</div>")
 		$('#page-response').append('<div>Correct Answers: ' + game.correct + '</div>')
 		$('#page-response').append('<div>Incorrect Answers: ' + game.incorrect + '</div>')
 		$('#page-response').append('<div>Unanswered: ' + game.unanswered + '</div>')
