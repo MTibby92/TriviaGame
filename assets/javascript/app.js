@@ -1,14 +1,17 @@
-var counter;
+var counter; //initializes the timer
 
 var game = {
-	time: 31,
-	pause: 6,
-	questionNumber: 1,
+	time: 30, //length given for each question (reality its 30)
+	//pause: 3, //length for correct or incorrect prompts
+	questionNumber: 1, //tracks which question the user is on
 	correct: 0,
 	incorrect: 0,
 	unanswered: 0,
+	//array of the questions for the quiz
 	questions: ['Question 1', 'Question 2', 'Question 3', 'Question 4'],
+	//array of arrays for choices for each question
 	choices: [['a', 'b', 'c', 'd'], ['a', 'b', 'c', 'd'], ['a', 'b', 'c', 'd'], ['a', 'b', 'c', 'd']],
+	//array of right answers to each question
 	answers: ['a', 'b', 'c', 'd'],
 	initialPage: function() {
 		$('#time-remaining').hide()
@@ -54,37 +57,41 @@ var game = {
 	correctAnswer: function() {
 		game.correct++
 		clearInterval(counter)
-		$('#page-response').html('Correct!')
+		//check if this works, otherwise go back to adding it to the html
+		$('#page-response').append('<p>Correct!</p>')
 		$('#question').hide()
 		$('#choices').hide()
 		if (game.questionNumber < 5) {
-			var pauseTime = setTimeout(game.newPage, 5000)
+			var pauseTime = setTimeout(game.newPage, 2000)
 		}else {
-			var pauseTime = setTimeout(game.results, 5000)
+			var pauseTime = setTimeout(game.results, 2000)
 		}
 	},
 	noAnswer: function() {
 		game.unanswered++
 		clearInterval(counter)
-		$('#page-response').html('Nope!')
+		$('#page-response').append('<p>Nope!</p>')
+		//note that the noAnswer function has to subtract two because in the timer function we increase the question number before we call this function; this is not the case with the correct answer and the wrong answer
+		$('#page-response').append('<p>The correct answer was: ' + game.answers[game.questionNumber-2] + '</p>')
 		$('#question').hide()
 		$('#choices').hide()
 		if (game.questionNumber < 5) {
-			var pauseTime = setTimeout(game.newPage, 5000)
+			var pauseTime = setTimeout(game.newPage, 2000)
 		}else {
-			var pauseTime = setTimeout(game.results, 5000)
+			var pauseTime = setTimeout(game.results, 2000)
 		}
 	},
 	wrongAnswer: function() {
 		game.incorrect++
 		clearInterval(counter)
-		$('#page-response').html('Nope!')
+		$('#page-response').append('<p>Nope!</p>')
+		$('#page-response').append('<p>The correct answer was: ' + game.answers[game.questionNumber-1] + '</p>')
 		$('#question').hide()
 		$('#choices').hide()
 		if (game.questionNumber < 5) {
-			var pauseTime = setTimeout(game.newPage, 5000)
+			var pauseTime = setTimeout(game.newPage, 2000)
 		}else {
-			var pauseTime = setTimeout(game.results, 5000)
+			var pauseTime = setTimeout(game.results, 2000)
 		}
 	},
 	results: function() {
