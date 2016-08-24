@@ -8,11 +8,11 @@ var game = {
 	incorrect: 0,
 	unanswered: 0,
 	//array of the questions for the quiz
-	questions: ['Question 1', 'Question 2', 'Question 3', 'Question 4'],
+	questions: ['Question 1: Who became the most expensive teenager in British football history when he moved to Liverpool in 1995?', 'Question 2: Who are the only team Liverppol have scored seven against in one game in the Premier League?', 'Question 3: Which former Liverpool manager has a brown belt in judo?', 'Question 4: Who is the oldest goal scorer in a Liverpool shirt?'],
 	//array of arrays for choices for each question
-	choices: [['a', 'b', 'c', 'd'], ['a', 'b', 'c', 'd'], ['a', 'b', 'c', 'd'], ['a', 'b', 'c', 'd']],
+	choices: [['Steven Gerrard', 'Mark Kennedy', 'Jamie Carragher', 'Raheem Sterling'], ['Newcastle United', 'Blackburn Rovers', 'Aston Villa', 'Southampton'], ['Rafa Benitez', 'Kennie Dalglish', 'Brendan Rodgers', 'Gerard Houlier'], ['Billy Liddell', 'Ian Rush', 'Rickie Lambert', 'Robbie Fowler']],
 	//array of right answers to each question
-	answers: ['a', 'b', 'c', 'd'],
+	answers: ['Mark Kennedy', 'Southampton', 'Rafa Benitez', 'Billy Liddell'],
 	initialPage: function() {
 		$('#time-remaining').hide()
 		//$('#time-remaining').hide()
