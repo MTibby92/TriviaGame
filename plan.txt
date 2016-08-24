@@ -6,4 +6,14 @@ answer choices should each be buttons so you can click anywhere; style it to not
 
 game object needs a timer method
 
-game object can have a question attribute/object with key:value pairs? can a key have multiple values
+game object can have a question attribute/object with key:value pairs? can a key have multiple values (works as long as the values are in an array)
+
+need a method to generate the new question page
+
+need a method to generate the correct answer page
+
+need a method to create the wrong answer page
+
+need a method to generate the final results page
+
+need a method to restart the game or create a new object of the game
