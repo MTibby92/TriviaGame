@@ -98,7 +98,18 @@ var game = {
 		$('#start').on('click', game.restart)
 	},
 	restart: function() {
+		counter = undefined
+		game.questionNumber = 1
+		game.correct = 0
+		game.incorrect = 0
+		game.unanswered = 0
 
+		$('#time-remaining').hide()
+		$('#page-response').empty()
+		$('#question').empty()
+		$('#choices').hide()
+
+		game.newPage()
 	}
 }
 
