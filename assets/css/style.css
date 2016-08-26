@@ -47,4 +47,15 @@
 
 .selection {
 	margin-right: 5%;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+	background-color: white;
+	border: none;
+}
+
+.selection:hover {
+	background-color: red;
+	font-weight: bold;
+	border-radius: 6px;
+	border-color: 1px solid red; 
 }
