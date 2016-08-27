@@ -61,9 +61,9 @@ var game = {
 		$('#question').hide()
 		$('#choices').hide()
 		if (game.questionNumber < 5) {
-			var pauseTime = setTimeout(game.newPage, 2000)
+			var pauseTime = setTimeout(game.newPage, 3500)
 		}else {
-			var pauseTime = setTimeout(game.results, 2000)
+			var pauseTime = setTimeout(game.results, 3500)
 		}
 	},
 	noAnswer: function() {
@@ -75,9 +75,9 @@ var game = {
 		$('#question').hide()
 		$('#choices').hide()
 		if (game.questionNumber < 5) {
-			var pauseTime = setTimeout(game.newPage, 2000)
+			var pauseTime = setTimeout(game.newPage, 3500)
 		}else {
-			var pauseTime = setTimeout(game.results, 2000)
+			var pauseTime = setTimeout(game.results, 3500)
 		}
 	},
 	wrongAnswer: function() {
@@ -88,9 +88,9 @@ var game = {
 		$('#question').hide()
 		$('#choices').hide()
 		if (game.questionNumber < 5) {
-			var pauseTime = setTimeout(game.newPage, 2000)
+			var pauseTime = setTimeout(game.newPage, 3500)
 		}else {
-			var pauseTime = setTimeout(game.results, 2000)
+			var pauseTime = setTimeout(game.results, 3500)
 		}
 	},
 	results: function() {
